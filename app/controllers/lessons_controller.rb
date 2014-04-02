@@ -13,7 +13,7 @@ class LessonsController < ApplicationController
     @lesson = Lesson.new(params[:lesson])
 
     if @lesson.save
-      redirect_to("/lessons/#{@lesson.id}/view")
+      redirect_to("/lessons/#{@lesson.id}")
     else
       render('lessons/new.html.erb')
     end
@@ -21,6 +21,8 @@ class LessonsController < ApplicationController
 
   def view
     @lesson = Lesson.find(params[:id])
+    @next = @lesson.next
+    @prev = @lesson.prev
     render('lessons/view.html.erb')
   end
 
@@ -43,5 +45,4 @@ class LessonsController < ApplicationController
     @lesson.destroy
     redirect_to("/lessons")
   end
-
 end

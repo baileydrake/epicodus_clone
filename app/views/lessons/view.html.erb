@@ -6,8 +6,17 @@
 <p><a href="/lessons">Back</a></p>
 
 <p><a href="/lessons/<%= @lesson.id %>/edit">Edit</a></p>
-<p><a href="/lessons/<%= @lesson.id %>/"
+<p><a href="/lessons/<%= @lesson.id %>"
       data-confirm="You sure?"
       data-method="delete"
       rel="nofollow">Delete</a></p>
+
+<% if @next != nil %>
+<p><a href="/lessons/<%= @next.id %>">Next Lesson</a></p>
+<% end %>
+
+
+<% if @prev != nil %>
+<p><a href="/lessons/<%= @prev.id %>">Prev Lesson</a></p>
+<% end %>
 
