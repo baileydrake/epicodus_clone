@@ -1,0 +1,10 @@
+<h1> Here is the table of contents</h1>
+
+<h3>Here are the lessons:</h3>
+<ul>
+<% @lessons.each do |lesson| %>
+<li><a href='lessons/<%= lesson.id %>'><%= lesson.name %></a></li>
+<% end %>
+</ul>
+
+<p><a href="/lessons/new">Add Lesson</a></p>

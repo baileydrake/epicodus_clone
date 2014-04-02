@@ -1,0 +1,6 @@
+development:
+  adapter: postgresql
+  database: epicodus_clone_development
+test:
+  adapter: postgresql
+  database: epicodus_clone_test
