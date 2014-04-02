@@ -1,0 +1,16 @@
+<h1> Sections index </h1>
+
+<h3>Here are the sections:</h3>
+<ul>
+<% @sections.each do |section| %>
+  <li><%= section.name %></li>
+    <ul>
+    <% section.lessons.each do |lesson| %>
+      <li><a href='lessons/<%= lesson.id %>'><%= lesson.name %></a></li>
+    <% end %>
+  </ul>
+<% end %>
+</ul>
+
+
+<p><a href="/sections/new">Create New</a></p>

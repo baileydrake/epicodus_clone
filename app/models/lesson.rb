@@ -2,6 +2,7 @@ class Lesson < ActiveRecord::Base
   validates :name, :presence => true
   validates :description, :presence => true
   validates :number, :uniqueness => true
+  belongs_to :section
 
 
   def next

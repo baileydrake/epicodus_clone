@@ -3,7 +3,7 @@
 <p><%= @lesson.description %></p>
 
 
-<p><a href="/lessons">Back</a></p>
+<p><%= link_to 'Back to Section', :back %></p>
 
 <p><a href="/lessons/<%= @lesson.id %>/edit">Edit</a></p>
 <p><a href="/lessons/<%= @lesson.id %>"

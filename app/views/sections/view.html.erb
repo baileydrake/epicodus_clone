@@ -1,0 +1,16 @@
+<h1> <%= @section.name %> </h1>
+
+<ul>
+  <% @section.lessons.each do |lesson| %>
+    <li><a href="/lessons/<%= lesson.id %>"><%= lesson.name %></a></li>
+  <% end %>
+</ul>
+
+
+
+<p><a href='/sections'>Back</a></p>
+<p><a href="/sections/<%= @section.id %>/edit">Edit Name</a></p>
+<p><a href="/sections/<%= @section.id %>"
+      data-confirm="You sure?"
+      data-method="delete"
+      rel="nofollow">Delete</a></p>

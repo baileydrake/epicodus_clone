@@ -1,0 +1,8 @@
+<h1>Edit <%= @section.name %></h1>
+
+<form action="/sections/<%= @section.id %>" method="post">
+<input name="_method" type="hidden" value="patch">
+<label for="section_name">Name</label>
+<input id="section_name" name="section[name]" type="text" value="<%= @section.name %>">
+<button>Update Section</button>
+</form>
